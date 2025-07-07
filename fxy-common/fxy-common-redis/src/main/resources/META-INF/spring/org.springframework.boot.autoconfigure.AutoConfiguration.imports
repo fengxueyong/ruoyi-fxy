@@ -1,2 +1,2 @@
-com.ruoyi.common.redis.configure.RedisConfig
-com.ruoyi.common.redis.service.RedisService
+com.fxy.common.redis.configure.RedisConfig
+com.fxy.common.redis.service.RedisService

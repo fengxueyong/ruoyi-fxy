@@ -1,5 +1,5 @@
-com.ruoyi.common.security.config.WebMvcConfig
-com.ruoyi.common.security.service.TokenService
-com.ruoyi.common.security.aspect.PreAuthorizeAspect
-com.ruoyi.common.security.aspect.InnerAuthAspect
-com.ruoyi.common.security.handler.GlobalExceptionHandler
+com.fxy.common.security.config.WebMvcConfig
+com.fxy.common.security.service.TokenService
+com.fxy.common.security.aspect.PreAuthorizeAspect
+com.fxy.common.security.aspect.InnerAuthAspect
+com.fxy.common.security.handler.GlobalExceptionHandler
