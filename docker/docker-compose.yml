@@ -1,12 +1,13 @@
 version : '3.8'
 services:
-  ruoyi-nacos:
+  fxy-nacos:
     container_name: fxy-nacos
     image: nacos/nacos-server
     build:
       context: ./nacos
     environment:
       - MODE=standalone
+      - NACOS_AUTH_ENABLE=false  # added by fxy
     volumes:
       - ./nacos/logs/:/home/nacos/logs
       - ./nacos/conf/application.properties:/home/nacos/conf/application.properties
