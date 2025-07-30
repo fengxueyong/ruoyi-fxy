@@ -7,7 +7,6 @@ services:
       context: ./nacos
     environment:
       - MODE=standalone
-      - NACOS_AUTH_ENABLE=false  # added by fxy
     volumes:
       - ./nacos/logs/:/home/nacos/logs
       - ./nacos/conf/application.properties:/home/nacos/conf/application.properties
@@ -28,6 +27,7 @@ services:
       - ./mysql/conf:/etc/mysql/conf.d
       - ./mysql/logs:/logs
       - ./mysql/data:/var/lib/mysql
+      - ./mysql/db/:/docker-entrypoint-initdb.d/
     command: [
           'mysqld',
           '--innodb-buffer-pool-size=80M',
@@ -37,7 +37,7 @@ services:
           '--lower-case-table-names=1'
         ]
     environment:
-      MYSQL_DATABASE: 'ry-cloud'
+      MYSQL_DATABASE: 'fxy-cloud'
       MYSQL_ROOT_PASSWORD: password
   fxy-redis:
     container_name: fxy-redis
