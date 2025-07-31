@@ -2,7 +2,8 @@ version : '3.8'
 services:
   fxy-nacos:
     container_name: fxy-nacos
-    image: nacos/nacos-server
+    #image: nacos/nacos-server
+    image: nacos/nacos-server:v2.3.0  #如果使用latest版本，会报env NACOS_AUTH_TOKEN must be set with Base64 String.错误，
     build:
       context: ./nacos
     environment:
